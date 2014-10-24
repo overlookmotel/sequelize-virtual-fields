@@ -1,0 +1,38 @@
+{
+  "name": "sequelize-virtual-fields",
+  "version": "0.0.1",
+  "description": "Sequelize virtual fields magic",
+  "main": "./lib/",
+  "author": {
+    "name": "Overlook Motel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/overlookmotel/sequelize-virtual-fields.git"
+  },
+  "bugs": {
+    "url": "https://github.com/overlookmotel/sequelize-virtual-fields/issues"
+  },
+  "dependencies": {
+  },
+  "peerDependencies": {
+    "sequelize": "2.0.x"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "chai-as-promised": "*",
+    "sequelize": "2.0.x",
+    "mysql": "~2.4.1",
+    "lodash": "2.4.1"
+  },
+  "keywords": [
+  ],
+  "scripts": {
+    "test": "make test"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "readmeFilename": "README.md"
+}
