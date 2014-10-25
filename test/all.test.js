@@ -10,8 +10,7 @@ var chai = require('chai'),
 	Support = require(__dirname + '/support'),
 	Sequelize = Support.Sequelize,
 	Promise = Sequelize.Promise,
-	Utils = Sequelize.Utils,
-	_ = Utils._;
+	_ = require('lodash');
 
 // init
 chai.use(promised);
