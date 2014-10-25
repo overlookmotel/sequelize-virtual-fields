@@ -14,7 +14,6 @@ var chai = require('chai'),
 	_ = Utils._;
 
 // init
-
 chai.use(promised);
 chai.config.includeStack = true;
 
