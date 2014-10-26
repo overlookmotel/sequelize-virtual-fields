@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "lodash": "2.4.1",
+    "toposort-extended": "0.x"
   },
   "peerDependencies": {
     "sequelize": "2.0.x"
