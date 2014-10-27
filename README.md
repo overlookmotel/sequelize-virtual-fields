@@ -18,6 +18,20 @@ The results returned from `Model#find()` will change in v0.2 (see Roadmap below)
 
 ## Usage
 
+### Loading module
+
+To load module:
+
+	var Sequelize = require('sequelize-virtual-fields')();
+	// NB Sequelize must also be present in `node_modules`
+
+or, a more verbose form useful if chaining multiple Sequelize plugins:
+
+	var Sequelize = require('sequelize');
+	require('sequelize-virtual-fields')(Sequelize);
+
+### Defining virtual fields
+
 Define the dependency of the virtual fields on other attributes or models:
 
 	// define models
@@ -50,7 +64,9 @@ Create some data:
 		return r.task.setPerson(r.person);
 	});
 
-Then `find()` a task, referencing the virtual field:
+### Retrieving virtual fields
+
+`find()` a task, referencing the virtual field:
 
 	return Task.find({ attributes: [ 'nameWithPerson' ] })
 	.then(function(task) {
@@ -59,11 +75,15 @@ Then `find()` a task, referencing the virtual field:
 
 The associated model 'Person' has been automatically fetched in order to get the name of the person.
 
-You can also sort by a virtual field:
+### Ordering by virtual fields
+
+You can also order by a virtual field:
 
 	Task.findAll({ attributes: [ 'nameWithPerson' ], order: [ [ 'nameWithPerson' ] ] });
 
-Please note that the behaviour above works because of the definition of `attribute`, `include` and `order` in the `Task` model's definition, as well as the getter function `get`.
+### Notes
+
+The behaviour of `find()` in examples above works because of the definition of `attribute`, `include` and `order` in the `Task` model's definition, as well as the getter function `get`.
 
 ## Tests
 
