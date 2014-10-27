@@ -68,7 +68,7 @@ Create some data:
 
 `find()` a task, referencing the virtual field:
 
-	return Task.find({ attributes: [ 'nameWithPerson' ] })
+	Task.find({ attributes: [ 'nameWithPerson' ] })
 	.then(function(task) {
 		// task.values.nameWithPerson = 'Do the washing (Brad Pitt)'
 	});
@@ -79,7 +79,10 @@ The associated model 'Person' has been automatically fetched in order to get the
 
 You can also order by a virtual field:
 
-	Task.findAll({ attributes: [ 'nameWithPerson' ], order: [ [ 'nameWithPerson' ] ] });
+	Task.findAll({
+		attributes: [ 'nameWithPerson' ],
+		order: [ [ 'nameWithPerson' ] ]
+	});
 
 ### Notes
 
