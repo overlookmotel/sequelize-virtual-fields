@@ -30,7 +30,7 @@
   "keywords": [
   ],
   "scripts": {
-    "test": "make test"
+    "test": "make all"
   },
   "engines": {
     "node": ">=0.10.0"
