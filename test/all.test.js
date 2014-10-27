@@ -249,4 +249,78 @@ describe(Support.getTestDialectTeaser('Tests'), function () {
 			});
 		});
 	});
+	
+	describe('find', function() {
+		beforeEach(function() {
+			this.Company = this.sequelize.define('Company', {
+				name: Sequelize.STRING,
+				virt: {
+					type: Sequelize.VIRTUAL,
+					get: function() { return this.get('name'); },
+					attributes: ['name'],
+					order: [['name']]
+				}
+			});
+			
+			this.Person = this.sequelize.define('Person', {
+				name: Sequelize.STRING,
+				virt: {
+					type: Sequelize.VIRTUAL,
+					get: function() { return this.get('name') + ' - ' + this.Company.get('virt'); },
+					attributes: ['name'],
+					include: {model: 'Company', attributes: ['virt']},
+					order: [['name'], ['Company', 'virt']]
+				}
+			});
+			
+			this.Task = this.sequelize.define('Task', {
+				name: Sequelize.STRING,
+				virt: {
+					type: Sequelize.VIRTUAL,
+					get: function() { return this.get('name') + ' - ' + this.Person.get('virt'); },
+					attributes: ['name'],
+					include: {model: 'Person', attributes: ['virt']},
+					order: [['name'], ['Person', 'virt']]
+				},
+				virt2: {
+					type: Sequelize.VIRTUAL,
+					get: function() { return this.get('virt'); },
+					attributes: ['virt'],
+					order: [['virt']]
+				}
+			});
+			
+			this.Person.belongsTo(this.Company);
+			this.Company.hasMany(this.Person);
+			
+			this.Task.belongsTo(this.Person);
+			this.Person.hasMany(this.Task);
+			
+			this.sequelize.initVirtualFields();
+			
+			return Promise.bind(this).then(function() {
+				return this.sequelize.sync();
+			}).then(function() {
+				return Promise.props({
+					company: this.Company.create({name: 'company'}),
+					person: this.Person.create({name: 'person'}),
+					task: this.Task.create({name: 'task'})
+				});
+			}).then(function(results) {
+				_.extend(this, results);
+				
+				return Promise.all([
+					this.task.setPerson(this.person),
+					this.person.setCompany(this.company)
+				]);
+			});
+		});
+		
+		it('replaces virtual fields in attributes', function() {
+			return this.Task.find({where: {name: 'task'}, attributes: ['virt2']})
+			.then(function(task) {
+				expect(task.get('virt2')).to.equal('task - person - company');
+			});
+		});
+	});
 });
