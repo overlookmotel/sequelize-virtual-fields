@@ -322,7 +322,7 @@ describe(Support.getTestDialectTeaser('Tests'), function () {
 		it('replaces virtual fields in attributes', function() {
 			return this.Task.find({where: {name: 'task'}, attributes: ['virt2']})
 			.then(function(task) {
-				expect(task.get('virt2')).to.equal('task - person - company');
+				expect(task.virt2).to.equal('task - person - company');
 			});
 		});
 		
