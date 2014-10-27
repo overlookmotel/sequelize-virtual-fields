@@ -12,6 +12,9 @@ var chai = require('chai'),
 	Promise = Sequelize.Promise,
 	_ = require('lodash');
 
+// imports
+var utils = require('../lib/utils');
+
 // init
 chai.use(promised);
 chai.config.includeStack = true;
@@ -320,6 +323,13 @@ describe(Support.getTestDialectTeaser('Tests'), function () {
 			return this.Task.find({where: {name: 'task'}, attributes: ['virt2']})
 			.then(function(task) {
 				expect(task.get('virt2')).to.equal('task - person - company');
+			});
+		});
+		
+		it('replaces virtual fields in order', function() {
+			return this.Task.find({where: {name: 'task'}, attributes: ['virt2'], order: [['virt2']]})
+			.on('sql', function(sql) {
+				expect(utils.endsWith(sql, 'ORDER BY `name` ASC, `Person`.`name` ASC, `Person.Company`.`name` ASC LIMIT 1;')).to.be.true;
 			});
 		});
 	});
