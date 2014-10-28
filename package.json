@@ -32,6 +32,11 @@
 	"jshint": "2.5.x"
   },
   "keywords": [
+    "sequelize",
+    "sequelize-plugin",
+    "virtual",
+    "fields",
+    "magic"
   ],
   "scripts": {
     "test": "make all"
