@@ -12,7 +12,12 @@ Why is this useful? You might, for example, want to build a Drupal-style framewo
 
 ## Current status
 
+[![Build Status](https://secure.travis-ci.org/overlookmotel/sequelize-virtual-fields.png)](http://travis-ci.org/overlookmotel/sequelize-virtual-fields)
+[![Dependency Status](https://david-dm.org/overlookmotel/sequelize-virtual-fields.png)](https://david-dm.org/overlookmotel/sequelize-virtual-fields)
+
 API is stable. Tested and works on MySQL. Untested on other dialects supported by Sequelize.
+
+Requires recent master of Sequelize v2.x dev branch, more recent than 28 Oct 2014. This is more recent than v2.0.0-rc2 which is latest available on NPM. i.e. you need to get latest Sequelize from Github (hence why Travis is failing).
 
 ## Usage
 
@@ -89,7 +94,7 @@ The behaviour of `find()` in examples above works because of the definition of `
 ## Tests
 
 Use `npm test` to run the tests.
-Requires a database called 'sequelize_test' and a db user 'sequelize_test', password 'sequelize_test'.
+Requires a database called 'sequelize_test' and a db user 'travis' with no password.
 
 ## Changelog
 
