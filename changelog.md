@@ -16,3 +16,11 @@
 
 * `npm test` runs tests on all dialects
 * Updated README
+
+## 0.1.2
+
+* Bug fixes
+* JSHint included in tests
+* Set versions for mocha & chai dependencies
+* Travis integration
+* Updated README
