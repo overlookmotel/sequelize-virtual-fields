@@ -24,3 +24,7 @@
 * Set versions for mocha & chai dependencies
 * Travis integration
 * Updated README
+
+## 0.1.3
+
+* Updated README

@@ -1,6 +1,6 @@
 {
   "name": "sequelize-virtual-fields",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Sequelize virtual fields magic",
   "main": "./lib/",
   "author": {
