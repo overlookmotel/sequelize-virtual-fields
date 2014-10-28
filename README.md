@@ -14,8 +14,6 @@ Why is this useful? You might, for example, want to build a Drupal-style framewo
 
 API is stable. Tested and works on MySQL. Untested on other dialects supported by Sequelize.
 
-The results returned from `Model#find()` will change in v0.2 (see Roadmap below).
-
 ## Usage
 
 ### Loading module
@@ -96,10 +94,6 @@ Requires a database called 'sequelize_test' and a db user 'sequelize_test', pass
 ## Changelog
 
 See changelog.md
-
-## Roadmap
-
-In next version, results from find will populate the values of virtual fields into `dataValues` and remove attributes/associated models that this plugin has added. This will make using virtual fields completely transparent to the user.
 
 ## Known issues
 
