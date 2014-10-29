@@ -35,3 +35,7 @@
 * Tests db user sequelize_test
 * Travis uses db user travis
 * Updated README
+
+## 0.1.5
+
+* Tests amended to handle all SQL dialects
