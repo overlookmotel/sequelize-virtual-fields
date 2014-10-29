@@ -28,3 +28,10 @@
 ## 0.1.3
 
 * Updated README
+
+## 0.1.4
+
+* Travis loads sequelize dependency from Github repo master branch not npm
+* Tests db user sequelize_test
+* Travis uses db user travis
+* Updated README
