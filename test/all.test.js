@@ -327,9 +327,16 @@ describe(Support.getTestDialectTeaser('Tests'), function () {
 		});
 		
 		it('replaces virtual fields in order', function() {
+			var expectedSql = ({
+				mysql: 'ORDER BY `name` ASC, `Person`.`name` ASC, `Person.Company`.`name` ASC LIMIT 1;',
+				sqlite: 'ORDER BY `name` ASC, `Person`.`name` ASC, `Person.Company`.`name` ASC LIMIT 1;',
+				postgres: 'ORDER BY "name" ASC, "Person"."name" ASC, "Person.Company"."name" ASC LIMIT 1;',
+				mariadb: 'ORDER BY `name` ASC, `Person`.`name` ASC, `Person.Company`.`name` ASC LIMIT 1;'
+			})[Support.getTestDialect()];
+			
 			return this.Task.find({where: {name: 'task'}, attributes: ['virt2'], order: [['virt2']]})
 			.on('sql', function(sql) {
-				expect(utils.endsWith(sql, 'ORDER BY `name` ASC, `Person`.`name` ASC, `Person.Company`.`name` ASC LIMIT 1;')).to.be.true;
+				expect(utils.endsWith(sql, expectedSql)).to.be.true;
 			});
 		});
 	});
