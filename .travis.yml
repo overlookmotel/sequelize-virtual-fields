@@ -7,9 +7,10 @@ before_script:
   - "cd ../../"
   - "mysql -e 'create database sequelize_test;'"
   - "psql -c 'create database sequelize_test;' -U postgres"
+  - "export SEQ_USER=travis"
 
 script:
-  - "SEQ_USER=travis make test"
+  - "make test"
 
 env:
   - DB=mysql DIALECT=mysql
