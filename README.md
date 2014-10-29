@@ -17,7 +17,7 @@ Why is this useful? You might, for example, want to build a Drupal-style framewo
 
 API is stable. Tested and works on MySQL. Untested on other dialects supported by Sequelize.
 
-Requires recent master of Sequelize v2.x dev branch, more recent than 28 Oct 2014. This is more recent than v2.0.0-rc2 which is latest available on NPM. i.e. you need to get latest Sequelize from Github (hence why Travis is failing).
+Requires recent master of Sequelize v2.x dev branch, more recent than 28 Oct 2014. This is more recent than v2.0.0-rc2 which is latest available on NPM. i.e. you need to get latest Sequelize from Github.
 
 ## Usage
 
