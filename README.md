@@ -15,7 +15,7 @@ Why is this useful? You might, for example, want to build a Drupal-style framewo
 [![Build Status](https://secure.travis-ci.org/overlookmotel/sequelize-virtual-fields.png)](http://travis-ci.org/overlookmotel/sequelize-virtual-fields)
 [![Dependency Status](https://david-dm.org/overlookmotel/sequelize-virtual-fields.png)](https://david-dm.org/overlookmotel/sequelize-virtual-fields)
 
-API is stable. Tested and works on MySQL. Untested on other dialects supported by Sequelize.
+API is stable. All features and options are fairly well tested. Works with all dialects of SQL supported by Sequelize (MySQL, Postgres, SQLite).
 
 Requires recent master of Sequelize v2.x dev branch, more recent than 28 Oct 2014. This is more recent than v2.0.0-rc2 which is latest available on NPM. i.e. you need to get latest Sequelize from Github.
 
