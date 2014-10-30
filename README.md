@@ -99,7 +99,7 @@ This plugin changes the normal function of `Instance#get()` and `Instance.values
 
 Usually virtual fields are not present in `Instance#dataValues` and have to be accessed with `Instance#get()` or by `<instance>.<attribute name>`. This plugin alters that behaviour - virtual fields' values are added to `dataValues` before results are returned from `Model#find()`, and then calling `get()` basically just retrieves `dataValues`.
 
-The purpose is for virtual fields to look and behave exactly like normal fields for getting purposes (setting in another matter!)
+The purpose is for virtual fields to look and behave exactly like normal fields for getting purposes (setting is another matter!)
 
 ## Tests
 
