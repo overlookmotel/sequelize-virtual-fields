@@ -73,10 +73,12 @@ Create some data:
 
 	Task.find({ attributes: [ 'nameWithPerson' ] })
 	.then(function(task) {
-		// task.values.nameWithPerson = 'Do the washing (Brad Pitt)'
+		// task.values = { nameWithPerson: 'Do the washing (Brad Pitt)' }
 	});
 
 The associated model 'Person' has been automatically fetched in order to get the name of the person.
+
+The fields and eager-loaded associations necessary (`Person`, `Company`) are deleted from the result before returning.
 
 ### Ordering by virtual fields
 
@@ -90,6 +92,14 @@ You can also order by a virtual field:
 ### Notes
 
 The behaviour of `find()` in examples above works because of the definition of `attribute`, `include` and `order` in the `Task` model's definition, as well as the getter function `get`.
+
+### IMPORTANT NOTE
+
+This plugin changes the normal function of `Instance#get()` and `Instance.values` in Sequelize.
+
+Usually virtual fields are not present in `Instance#dataValues` and have to be accessed with `Instance#get()` or by `<instance>.<attribute name>`. This plugin alters that behaviour - virtual fields' values are added to `dataValues` before results are returned from `Model#find()`, and then calling `get()` basically just retrieves `dataValues`.
+
+The purpose is for virtual fields to look and behave exactly like normal fields for getting purposes (setting in another matter!)
 
 ## Tests
 
