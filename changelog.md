@@ -48,3 +48,7 @@ Now working on all Sequelize dialects.
 * Virtual fields populated in `dataValues` before returning results from `Model#find()` and dependent attributes/includes removed from result
 * Travis tests both master and dev branches
 * README update
+
+## 0.2.1
+
+* `Instance#get()` behaves as normal until `Sequelize#initVirtualFields()` is called
