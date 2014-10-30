@@ -12,7 +12,7 @@ Why is this useful? You might, for example, want to build a Drupal-style framewo
 
 ## Current status
 
-[![Build Status](https://secure.travis-ci.org/overlookmotel/sequelize-virtual-fields.png)](http://travis-ci.org/overlookmotel/sequelize-virtual-fields)
+[![Build Status](https://secure.travis-ci.org/overlookmotel/sequelize-virtual-fields.png?branch=master)](http://travis-ci.org/overlookmotel/sequelize-virtual-fields)
 [![Dependency Status](https://david-dm.org/overlookmotel/sequelize-virtual-fields.png)](https://david-dm.org/overlookmotel/sequelize-virtual-fields)
 
 API is stable. All features and options are fairly well tested. Works with all dialects of SQL supported by Sequelize (MySQL, Postgres, SQLite).
