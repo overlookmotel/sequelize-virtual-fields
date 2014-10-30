@@ -52,3 +52,7 @@ Now working on all Sequelize dialects.
 ## 0.2.1
 
 * `Instance#get()` behaves as normal until `Sequelize#initVirtualFields()` is called
+
+## 0.2.2
+
+* [FIX] Correctly handles plural results for includes
