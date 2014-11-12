@@ -60,3 +60,4 @@ Now working on all Sequelize dialects.
 ## Next
 
 * Update db library dependencies in line with Sequelize
+* Amend travis config file to use `npm install` to install Sequelize's dependencies after getting latest master from git
