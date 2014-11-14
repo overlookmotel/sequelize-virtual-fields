@@ -57,7 +57,7 @@ Now working on all Sequelize dialects.
 
 * [FIX] Correctly handles plural results for includes
 
-## Next
+## 0.2.3
 
 * [FIX] Handle empty result sets
 * Update db library dependencies in line with Sequelize
