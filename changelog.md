@@ -61,5 +61,6 @@ Now working on all Sequelize dialects.
 
 * [FIX] Handle empty result sets
 * Update db library dependencies in line with Sequelize
+* Refactor code in `afterFind` hook
 * Amend travis config file to use `npm install` to install Sequelize's dependencies after getting latest master from git
 * Added `editorconfig` file
