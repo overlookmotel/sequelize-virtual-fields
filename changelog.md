@@ -64,3 +64,7 @@ Now working on all Sequelize dialects.
 * Refactor code in `afterFind` hook
 * Amend travis config file to use `npm install` to install Sequelize's dependencies after getting latest master from git
 * Added `editorconfig` file
+
+## Next
+
+* Error thrown in beforeFind hook if try to reference a non-existent field in virtual field definition
