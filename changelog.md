@@ -68,3 +68,7 @@ Now working on all Sequelize dialects.
 ## 0.2.4
 
 * Error thrown in beforeFind hook if try to reference a non-existent field in virtual field definition
+
+## Next
+
+* Error thrown in mergeOrders if try to reference a non-existent field in virtual field definition
