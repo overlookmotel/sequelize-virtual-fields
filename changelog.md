@@ -72,3 +72,4 @@ Now working on all Sequelize dialects.
 ## Next
 
 * Error thrown in mergeOrders if try to reference a non-existent field in virtual field definition
+* Convert order by models to {model: model} form
