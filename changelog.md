@@ -69,7 +69,7 @@ Now working on all Sequelize dialects.
 
 * Error thrown in beforeFind hook if try to reference a non-existent field in virtual field definition
 
-## Next
+## 0.2.5
 
 * Error thrown in mergeOrders if try to reference a non-existent field in virtual field definition
 * Convert order by models to {model: model} form
