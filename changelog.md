@@ -73,3 +73,7 @@ Now working on all Sequelize dialects.
 
 * Error thrown in mergeOrders if try to reference a non-existent field in virtual field definition
 * Convert order by models to {model: model} form
+
+## Next
+
+* Specify to use latest Sequelize version from Github in package.json rather than .travis.yml
