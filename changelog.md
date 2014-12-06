@@ -81,3 +81,7 @@ Now working on all Sequelize dialects.
 ## 0.2.7
 
 * Updated sequelize dependency to v2.0.0-rc3
+
+## Next
+
+* JSHint ignores redefinition of `Promise`
