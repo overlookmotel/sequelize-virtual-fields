@@ -115,5 +115,6 @@ See changelog.md
 * Does not work with use of `association` in place of `model` in `include` or `order` e.g. `someModel.findAll({ include: [ {association: someAssociation } ] })` - throws error if encountered
 * No support for `Sequelize.col()` in order clauses
 * Crashes when using '.getXXX()' accessors to get many-to-many association if virtual fields defined in through model
+* Fails to remove all virtually included models (broken by recent changes to Sequelize, am working on a fix)
 
 If you discover a bug, please raise an issue on Github. https://github.com/overlookmotel/sequelize-virtual-fields/issues
