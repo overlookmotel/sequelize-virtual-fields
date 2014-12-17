@@ -84,4 +84,5 @@ Now working on all Sequelize dialects.
 
 ## Next
 
+* Temporary fix for failing removal of virtually included includes
 * JSHint ignores redefinition of `Promise`
