@@ -82,7 +82,7 @@ Now working on all Sequelize dialects.
 
 * Updated sequelize dependency to v2.0.0-rc3
 
-## Next
+## 0.2.8
 
 * Temporary fix for failing removal of virtually included includes
 * JSHint ignores redefinition of `Promise`
