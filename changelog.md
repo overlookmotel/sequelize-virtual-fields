@@ -87,6 +87,6 @@ Now working on all Sequelize dialects.
 * Temporary fix for failing removal of virtually included includes
 * JSHint ignores redefinition of `Promise`
 
-## Next
+## 0.2.9
 
 * Lock sequelize dependency to 2.0.0-rc3 (errors with rc4)
