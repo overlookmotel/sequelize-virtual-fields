@@ -91,6 +91,6 @@ Now working on all Sequelize dialects.
 
 * Lock sequelize dependency to 2.0.0-rc3 (errors with rc4)
 
-## Next
+## 0.2.10
 
 * Lock sequelize dev dependency to 2.0.0-rc3
