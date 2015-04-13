@@ -99,3 +99,4 @@ Now working on all Sequelize dialects.
 
 * Remove trailing tabs
 * Travis runs tests against node 0.10 and 0.12
+* README code examples tagged as Javascript
