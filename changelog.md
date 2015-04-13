@@ -94,3 +94,7 @@ Now working on all Sequelize dialects.
 ## 0.2.10
 
 * Lock sequelize dev dependency to 2.0.0-rc3
+
+## Next
+
+* Travis runs tests against node 0.10 and 0.12
