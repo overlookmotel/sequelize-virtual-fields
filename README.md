@@ -49,11 +49,11 @@ Define the dependency of the virtual fields on other attributes or models:
 			order: [ ['name'], [ Person, 'name' ] ]
 		}
 	});
-	
+
 	// define associations
 	Task.belongsTo(Person);
 	Person.hasMany(Task);
-	
+
 	// activate virtual fields functionality
 	sequelize.initVirtualFields();
 
