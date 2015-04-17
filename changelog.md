@@ -103,5 +103,6 @@ Now working on all Sequelize dialects.
 * Code tidy in test/support.js
 * Remove trailing tabs
 * Travis runs tests against node 0.10 and 0.12
+* Travis uses correct database users
 * Travis runs on new container infrastructure
 * README code examples tagged as Javascript
