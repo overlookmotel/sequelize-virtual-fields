@@ -101,6 +101,7 @@ Now working on all Sequelize dialects.
 * Update dev dependencies in line with sequelize v2.0.5
 * Update test support files in line with sequelize v2.0.5
 * Field type conditionals use instanceof
+* Partial support for Microsoft SQL Server
 * Code tidy in test/support.js
 * Remove trailing tabs
 * Travis runs tests against node 0.10 and 0.12
