@@ -95,7 +95,7 @@ Now working on all Sequelize dialects.
 
 * Lock sequelize dev dependency to 2.0.0-rc3
 
-## Next
+## 0.2.11
 
 * Update sequelize dependency to v2.0.0+
 * Update dev dependencies in line with sequelize v2.0.5
