@@ -94,3 +94,17 @@ Now working on all Sequelize dialects.
 ## 0.2.10
 
 * Lock sequelize dev dependency to 2.0.0-rc3
+
+## 0.2.11
+
+* Update sequelize dependency to v2.0.0+
+* Update dev dependencies in line with sequelize v2.0.5
+* Update test support files in line with sequelize v2.0.5
+* Field type conditionals use instanceof
+* Partial support for Microsoft SQL Server
+* Code tidy in test/support.js
+* Remove trailing tabs
+* Travis runs tests against node 0.10 and 0.12
+* Travis uses correct database users
+* Travis runs on new container infrastructure
+* README code examples tagged as Javascript

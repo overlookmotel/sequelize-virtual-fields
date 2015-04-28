@@ -15,9 +15,9 @@ Why is this useful? You might, for example, want to build a Drupal-style framewo
 [![Build Status](https://secure.travis-ci.org/overlookmotel/sequelize-virtual-fields.png?branch=master)](http://travis-ci.org/overlookmotel/sequelize-virtual-fields)
 [![Dependency Status](https://david-dm.org/overlookmotel/sequelize-virtual-fields.png)](https://david-dm.org/overlookmotel/sequelize-virtual-fields)
 
-API is stable. All features and options are fairly well tested. Works with all dialects of SQL supported by Sequelize (MySQL, Postgres, SQLite).
+API is stable. All features and options are fairly well tested. Works with all dialects of SQL supported by Sequelize (MySQL, Postgres, SQLite) except for Microsoft SQL Server.
 
-Requires Sequelize v2.0.0-rc3 or later.
+Requires Sequelize v2.0.0 or later.
 
 ## Usage
 
@@ -25,56 +25,66 @@ Requires Sequelize v2.0.0-rc3 or later.
 
 To load module:
 
-	var Sequelize = require('sequelize-virtual-fields')();
-	// NB Sequelize must also be present in `node_modules`
+```js
+var Sequelize = require('sequelize-virtual-fields')();
+// NB Sequelize must also be present in `node_modules`
+```
 
 or, a more verbose form useful if chaining multiple Sequelize plugins:
 
-	var Sequelize = require('sequelize');
-	require('sequelize-virtual-fields')(Sequelize);
+```js
+var Sequelize = require('sequelize');
+require('sequelize-virtual-fields')(Sequelize);
+```
 
 ### Defining virtual fields
 
 Define the dependency of the virtual fields on other attributes or models:
 
-	// define models
-	var Person = sequelize.define('Person', { name: Sequelize.STRING });
-	var Task = sequelize.define('Task', {
-		name: Sequelize.STRING,
-		nameWithPerson: {
-			type: Sequelize.VIRTUAL,
-			get: function() { return this.name + ' (' + this.Person.name + ')' }
-			attributes: [ 'name' ],
-			include: [ { model: Person, attributes: [ 'name' ] } ],
-			order: [ ['name'], [ Person, 'name' ] ]
-		}
-	});
-	
-	// define associations
-	Task.belongsTo(Person);
-	Person.hasMany(Task);
-	
-	// activate virtual fields functionality
-	sequelize.initVirtualFields();
+```js
+// define models
+var Person = sequelize.define('Person', { name: Sequelize.STRING });
+var Task = sequelize.define('Task', {
+	name: Sequelize.STRING,
+	nameWithPerson: {
+		type: Sequelize.VIRTUAL,
+		get: function() { return this.name + ' (' + this.Person.name + ')' }
+		attributes: [ 'name' ],
+		include: [ { model: Person, attributes: [ 'name' ] } ],
+		order: [ ['name'], [ Person, 'name' ] ]
+	}
+});
+
+// define associations
+Task.belongsTo(Person);
+Person.hasMany(Task);
+
+// activate virtual fields functionality
+sequelize.initVirtualFields();
+```
 
 Create some data:
 
-	// create a person and task and associate them
-	Promise.all({
-		person: Person.create({ name: 'Brad Pitt' }),
-		task: Task.create({ name: 'Do the washing' })
-	}).then(function(r) {
-		return r.task.setPerson(r.person);
-	});
+```js
+// create a person and task and associate them
+Promise.all({
+	person: Person.create({ name: 'Brad Pitt' }),
+	task: Task.create({ name: 'Do the washing' })
+}).then(function(r) {
+	return r.task.setPerson(r.person);
+});
+```
 
 ### Retrieving virtual fields
 
 `find()` a task, referencing the virtual field:
 
-	Task.find({ attributes: [ 'nameWithPerson' ] })
-	.then(function(task) {
-		// task.values = { nameWithPerson: 'Do the washing (Brad Pitt)' }
-	});
+```js
+Task.find({ attributes: [ 'nameWithPerson' ] })
+.then(function(task) {
+	// task.values = { nameWithPerson: 'Do the washing (Brad Pitt)' }
+});
+```
 
 The associated model 'Person' has been automatically fetched in order to get the name of the person.
 
@@ -84,10 +94,12 @@ The fields and eager-loaded associations necessary (`Person`, `Company`) are del
 
 You can also order by a virtual field:
 
-	Task.findAll({
-		attributes: [ 'nameWithPerson' ],
-		order: [ [ 'nameWithPerson' ] ]
-	});
+```js
+Task.findAll({
+	attributes: [ 'nameWithPerson' ],
+	order: [ [ 'nameWithPerson' ] ]
+});
+```
 
 ### Notes
 
