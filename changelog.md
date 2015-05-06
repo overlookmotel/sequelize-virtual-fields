@@ -108,3 +108,7 @@ Now working on all Sequelize dialects.
 * Travis uses correct database users
 * Travis runs on new container infrastructure
 * README code examples tagged as Javascript
+
+## Next
+
+* Loosen sequelize dependency version to v2.x.x
