@@ -116,4 +116,5 @@ Now working on all Sequelize dialects.
 * Update lodash dependency
 * Update dev dependencies
 * Specify toposort-extended dependency version
+* Remove unused utils functions
 * README contribution section

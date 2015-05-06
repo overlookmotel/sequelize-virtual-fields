@@ -12,9 +12,6 @@ var chai = require('chai'),
 	Promise = Sequelize.Promise,
 	_ = require('lodash');
 
-// imports
-var utils = require('../lib/utils');
-
 // init
 chai.use(promised);
 chai.config.includeStack = true;
@@ -336,7 +333,7 @@ describe(Support.getTestDialectTeaser('Tests'), function () {
 
 			return this.Task.find({where: {name: 'task'}, attributes: ['virt2'], order: [['virt2']]})
 			.on('sql', function(sql) {
-				expect(utils.endsWith(sql, expectedSql)).to.be.true;
+				expect(_.endsWith(sql, expectedSql)).to.be.true;
 			});
 		});
 	});
