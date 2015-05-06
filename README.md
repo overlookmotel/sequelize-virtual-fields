@@ -130,3 +130,12 @@ See changelog.md
 * Fails to remove all virtually included models (broken by recent changes to Sequelize, am working on a fix)
 
 If you discover a bug, please raise an issue on Github. https://github.com/overlookmotel/sequelize-virtual-fields/issues
+
+## Contribution
+
+Pull requests are very welcome. Please:
+
+* ensure all tests pass before submitting PR
+* add an entry to changelog
+* add tests for new features
+* document new functionality/API additions in README
