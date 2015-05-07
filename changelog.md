@@ -109,7 +109,7 @@ Now working on all Sequelize dialects.
 * Travis runs on new container infrastructure
 * README code examples tagged as Javascript
 
-## Next
+## 0.2.12
 
 * Loosen sequelize dependency version to v2.x.x
 * Update mysql module dependency in line with sequelize v2.1.0
