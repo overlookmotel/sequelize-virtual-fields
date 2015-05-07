@@ -331,8 +331,13 @@ describe(Support.getTestDialectTeaser('Tests'), function () {
 				mariadb: 'ORDER BY `Task`.`name` ASC, `Person`.`name` ASC, `Person.Company`.`name` ASC LIMIT 1;'
 			})[Support.getTestDialect()];
 
-			return this.Task.find({where: {name: 'task'}, attributes: ['virt2'], order: [['virt2']]})
-			.on('sql', function(sql) {
+			var sql;
+			return this.Task.find({
+				where: {name: 'task'},
+				attributes: ['virt2'],
+				order: [['virt2']]
+			}, {logging: function(log) {sql = log.match(/^Executing \([^\)]+\): (.*)$/)[1];}})
+			.then(function() {
 				expect(_.endsWith(sql, expectedSql)).to.be.true;
 			});
 		});
