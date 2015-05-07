@@ -119,3 +119,7 @@ Now working on all Sequelize dialects.
 * Remove reliance on `.on()` in tests (support for `.on()` removed in sequelize v2.1.0)
 * Remove unused utils functions
 * README contribution section
+
+## Next
+
+* Remove relative path to sequelize in tests
