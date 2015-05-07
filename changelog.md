@@ -120,6 +120,6 @@ Now working on all Sequelize dialects.
 * Remove unused utils functions
 * README contribution section
 
-## Next
+## 0.2.13
 
 * Remove relative path to sequelize in tests
