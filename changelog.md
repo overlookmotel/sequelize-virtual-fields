@@ -123,3 +123,7 @@ Now working on all Sequelize dialects.
 ## 0.2.13
 
 * Remove relative path to sequelize in tests
+
+## Next
+
+* Disable Travis dependency cache
