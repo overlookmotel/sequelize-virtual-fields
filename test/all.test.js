@@ -18,6 +18,9 @@ chai.config.includeStack = true;
 
 // tests
 
+/* jshint expr: true */
+/* global describe, it, beforeEach */
+
 describe(Support.getTestDialectTeaser('Tests'), function () {
 	describe('#initVirtualFields', function() {
 		describe('parses', function() {
