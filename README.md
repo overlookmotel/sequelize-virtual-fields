@@ -16,6 +16,7 @@ Why is this useful? You might, for example, want to build a Drupal-style framewo
 [![Build Status](https://img.shields.io/travis/overlookmotel/sequelize-virtual-fields/master.svg)](http://travis-ci.org/overlookmotel/sequelize-virtual-fields)
 [![Dependency Status](https://img.shields.io/david/overlookmotel/sequelize-virtual-fields.svg)](https://david-dm.org/overlookmotel/sequelize-virtual-fields)
 [![Dev dependency Status](https://img.shields.io/david/dev/overlookmotel/sequelize-virtual-fields.svg)](https://david-dm.org/overlookmotel/sequelize-virtual-fields)
+[![Coverage Status](https://img.shields.io/coveralls/overlookmotel/sequelize-virtual-fields/master.svg)](https://coveralls.io/r/overlookmotel/sequelize-virtual-fields)
 
 API is stable. All features and options are fairly well tested. Works with all dialects of SQL supported by Sequelize (MySQL, Postgres, SQLite) except for Microsoft SQL Server.
 
@@ -117,7 +118,7 @@ The purpose is for virtual fields to look and behave exactly like normal fields 
 
 ## Tests
 
-Use `npm test` to run the tests.
+Use `npm test` to run the tests. Use `npm run cover` to check coverage.
 Requires a database called 'sequelize_test' and a db user 'sequelize_test' with no password.
 
 ## Changelog
