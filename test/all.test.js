@@ -12,6 +12,8 @@ var chai = require('chai'),
 	Promise = Sequelize.Promise,
 	_ = require('lodash');
 
+var sequelizeVersion = require('sequelize/package.json').version;
+
 // init
 chai.use(promised);
 chai.config.includeStack = true;
@@ -20,6 +22,8 @@ chai.config.includeStack = true;
 
 /* jshint expr: true */
 /* global describe, it, beforeEach */
+
+console.log('Sequelize version:', sequelizeVersion);
 
 describe(Support.getTestDialectTeaser('Tests'), function () {
 	describe('#initVirtualFields', function() {
