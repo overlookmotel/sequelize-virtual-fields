@@ -124,7 +124,7 @@ Now working on all Sequelize dialects.
 
 * Remove relative path to sequelize in tests
 
-## Next
+## 0.3.0
 
 * Support for Sequelize v3.x.x
 * Update dependencies
