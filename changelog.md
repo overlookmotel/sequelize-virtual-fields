@@ -126,6 +126,7 @@ Now working on all Sequelize dialects.
 
 ## Next
 
+* Support for Sequelize v3.x.x
 * Update dependencies
 * Update dev dependencies in line with Sequelize v3.2.0
 * Travis runs tests with Sequelize v3 and v2

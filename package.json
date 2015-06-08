@@ -15,16 +15,17 @@
   },
   "dependencies": {
     "lodash": "3.8.0",
-    "toposort-extended": "^1.0.0"
+    "toposort-extended": "^1.0.0",
+    "semver-select": "^1.0.1"
   },
   "peerDependencies": {
-    "sequelize": "^2.0.0"
+    "sequelize": "2.0.0 - 3.x.x"
   },
   "devDependencies": {
     "mocha": "^2.2.4",
     "chai": "^2.3.0",
     "chai-as-promised": "^5.0.0",
-    "sequelize": "^2.0.0",
+    "sequelize": "2.0.0 - 3.x.x",
     "mysql": "~2.6.2",
     "sqlite3": "^3.0.6",
 	"pg": "^4.2.0",
