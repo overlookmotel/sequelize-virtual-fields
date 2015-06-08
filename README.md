@@ -12,8 +12,10 @@ Why is this useful? You might, for example, want to build a Drupal-style framewo
 
 ## Current status
 
-[![Build Status](https://secure.travis-ci.org/overlookmotel/sequelize-virtual-fields.png?branch=master)](http://travis-ci.org/overlookmotel/sequelize-virtual-fields)
-[![Dependency Status](https://david-dm.org/overlookmotel/sequelize-virtual-fields.png)](https://david-dm.org/overlookmotel/sequelize-virtual-fields)
+[![NPM version](https://img.shields.io/npm/v/sequelize-virtual-fields.svg)](https://www.npmjs.com/package/sequelize-virtual-fields)
+[![Build Status](https://img.shields.io/travis/overlookmotel/sequelize-virtual-fields/master.svg)](http://travis-ci.org/overlookmotel/sequelize-virtual-fields)
+[![Dependency Status](https://img.shields.io/david/overlookmotel/sequelize-virtual-fields.svg)](https://david-dm.org/overlookmotel/sequelize-virtual-fields)
+[![Dev dependency Status](https://img.shields.io/david/dev/overlookmotel/sequelize-virtual-fields.svg)](https://david-dm.org/overlookmotel/sequelize-virtual-fields)
 
 API is stable. All features and options are fairly well tested. Works with all dialects of SQL supported by Sequelize (MySQL, Postgres, SQLite) except for Microsoft SQL Server.
 
