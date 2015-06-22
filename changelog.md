@@ -134,3 +134,7 @@ Now working on all Sequelize dialects.
 * Run jshint on tests
 * Disable Travis dependency cache
 * Update README badges to use shields.io
+
+## Next
+
+* Get Utils direct from Sequelize
