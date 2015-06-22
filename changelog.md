@@ -135,6 +135,6 @@ Now working on all Sequelize dialects.
 * Disable Travis dependency cache
 * Update README badges to use shields.io
 
-## Next
+## 0.3.1
 
 * Get Utils direct from Sequelize
