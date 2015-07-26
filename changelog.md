@@ -108,3 +108,33 @@ Now working on all Sequelize dialects.
 * Travis uses correct database users
 * Travis runs on new container infrastructure
 * README code examples tagged as Javascript
+
+## 0.2.12
+
+* Loosen sequelize dependency version to v2.x.x
+* Update mysql module dependency in line with sequelize v2.1.0
+* Update lodash dependency
+* Update dev dependencies
+* Specify toposort-extended dependency version
+* Remove reliance on `.on()` in tests (support for `.on()` removed in sequelize v2.1.0)
+* Remove unused utils functions
+* README contribution section
+
+## 0.2.13
+
+* Remove relative path to sequelize in tests
+
+## 0.3.0
+
+* Support for Sequelize v3.x.x
+* Update dependencies
+* Update dev dependencies in line with Sequelize v3.2.0
+* Travis runs tests with Sequelize v3 and v2
+* Test code coverage & Travis sends to coveralls
+* Run jshint on tests
+* Disable Travis dependency cache
+* Update README badges to use shields.io
+
+## 0.3.1
+
+* Get Utils direct from Sequelize

@@ -10,16 +10,21 @@ var chai = require('chai'),
 	Support = require(__dirname + '/support'),
 	Sequelize = Support.Sequelize,
 	Promise = Sequelize.Promise,
+	semverSelect = require('semver-select'),
 	_ = require('lodash');
 
-// imports
-var utils = require('../lib/utils');
+var sequelizeVersion = require('sequelize/package.json').version;
 
 // init
 chai.use(promised);
 chai.config.includeStack = true;
 
 // tests
+
+/* jshint expr: true */
+/* global describe, it, beforeEach */
+
+console.log('Sequelize version:', sequelizeVersion);
 
 describe(Support.getTestDialectTeaser('Tests'), function () {
 	describe('#initVirtualFields', function() {
@@ -302,7 +307,7 @@ describe(Support.getTestDialectTeaser('Tests'), function () {
 			this.sequelize.initVirtualFields();
 
 			return Promise.bind(this).then(function() {
-				return this.sequelize.sync();
+				return this.sequelize.sync({force: true});
 			}).then(function() {
 				return Promise.props({
 					company: this.Company.create({name: 'company'}),
@@ -334,9 +339,24 @@ describe(Support.getTestDialectTeaser('Tests'), function () {
 				mariadb: 'ORDER BY `Task`.`name` ASC, `Person`.`name` ASC, `Person.Company`.`name` ASC LIMIT 1;'
 			})[Support.getTestDialect()];
 
-			return this.Task.find({where: {name: 'task'}, attributes: ['virt2'], order: [['virt2']]})
-			.on('sql', function(sql) {
-				expect(utils.endsWith(sql, expectedSql)).to.be.true;
+			var find = semverSelect(sequelizeVersion, {
+			    '^2.0.0': function(model, options) {
+			        return model.find(options, {transaction: options.transaction, logging: options.logging});
+			    },
+			    '*': function(model, options) {
+			        return model.find(options);
+			    }
+			});
+
+			var sql;
+			return find(this.Task, {
+				where: {name: 'task'},
+				attributes: ['virt2'],
+				order: [['virt2']],
+				logging: function(log) {sql = log.match(/^Executing \([^\)]+\): (.*)$/)[1];}
+			})
+			.then(function() {
+				expect(_.endsWith(sql, expectedSql)).to.be.true;
 			});
 		});
 	});
