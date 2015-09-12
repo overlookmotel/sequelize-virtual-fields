@@ -142,3 +142,7 @@ Now working on all Sequelize dialects.
 ## 0.3.2
 
 * MSSQL config for tests
+
+## Next
+
+* Use `Sequelize.version` for version number where available (closes #5)
