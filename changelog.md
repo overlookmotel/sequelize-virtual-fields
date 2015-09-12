@@ -139,6 +139,6 @@ Now working on all Sequelize dialects.
 
 * Get Utils direct from Sequelize
 
-## Next
+## 0.3.2
 
 * MSSQL config for tests
