@@ -148,4 +148,5 @@ Now working on all Sequelize dialects.
 * Use `Sequelize.version` for version number where available (closes #5)
 * Update dependency mysql in line with Sequelize v3.8.0
 * Update dependency lodash
+* Update dependency toposort-extended
 * Update dev dependencies
