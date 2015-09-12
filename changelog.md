@@ -138,3 +138,7 @@ Now working on all Sequelize dialects.
 ## 0.3.1
 
 * Get Utils direct from Sequelize
+
+## Next
+
+* MSSQL config for tests
