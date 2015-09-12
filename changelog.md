@@ -143,7 +143,7 @@ Now working on all Sequelize dialects.
 
 * MSSQL config for tests
 
-## Next
+## 0.3.3
 
 * Use `Sequelize.version` for version number where available (closes #5)
 * Update dependency mysql in line with Sequelize v3.8.0
