@@ -150,3 +150,7 @@ Now working on all Sequelize dialects.
 * Update dependency lodash
 * Update dependency toposort-extended
 * Update dev dependencies
+
+## Next
+
+* Update dev dependencies
