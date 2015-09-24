@@ -166,3 +166,4 @@ Now working on all Sequelize dialects.
 ## Next
 
 * Rename `SequelizeVirtualFieldsError` to `VirtualFieldsError`
+* Documentation for errors

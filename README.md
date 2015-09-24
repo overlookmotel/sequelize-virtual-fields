@@ -116,6 +116,10 @@ Usually virtual fields are not present in `Instance#dataValues` and have to be a
 
 The purpose is for virtual fields to look and behave exactly like normal fields for getting purposes (setting is another matter!)
 
+### Errors
+
+Errors thrown by the plugin are of type `VirtualFieldsError`. The error class can be accessed at `Sequelize.VirtualFieldsError`.
+
 ## Tests
 
 Use `npm test` to run the tests. Use `npm run cover` to check coverage.
