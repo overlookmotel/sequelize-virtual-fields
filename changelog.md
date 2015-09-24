@@ -153,4 +153,5 @@ Now working on all Sequelize dialects.
 
 ## Next
 
+* Update `semver-select` dependency
 * Update dev dependencies
