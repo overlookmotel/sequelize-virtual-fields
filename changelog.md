@@ -153,6 +153,7 @@ Now working on all Sequelize dialects.
 
 ## Next
 
+* Patch for `instance.options` renamed `$options` in Sequelize v3.9.0
 * Use `Utils` from passed Sequelize instance
 * Update `semver-select` dependency
 * Update dev dependencies
