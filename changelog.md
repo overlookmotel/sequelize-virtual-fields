@@ -151,7 +151,7 @@ Now working on all Sequelize dialects.
 * Update dependency toposort-extended
 * Update dev dependencies
 
-## Next
+## 0.3.4
 
 * Patch for `instance.options` renamed `$options` in Sequelize v3.9.0
 * Use `Utils` from passed Sequelize instance
