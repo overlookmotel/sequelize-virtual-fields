@@ -160,4 +160,5 @@ Now working on all Sequelize dialects.
 
 ## Next
 
+* Use `instance.options` patch in `instanceGet`
 * Use Sequelize instance in `instanceGet`
