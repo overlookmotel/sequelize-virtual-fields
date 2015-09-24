@@ -155,7 +155,7 @@ describe(Support.getTestDialectTeaser('Tests'), function () {
 
 				expect(function() {
 					this.sequelize.initVirtualFields();
-				}.bind(this)).to.throw(Sequelize.SequelizeVirtualFieldsError, "Attribute of virtual field 'Task'.'virt' refers to a nonexistent field 'Task'.'name'");
+				}.bind(this)).to.throw(Sequelize.VirtualFieldsError, "Attribute of virtual field 'Task'.'virt' refers to a nonexistent field 'Task'.'name'");
 			});
 
 			it('nonexistent model', function() {
@@ -168,7 +168,7 @@ describe(Support.getTestDialectTeaser('Tests'), function () {
 
 				expect(function() {
 					this.sequelize.initVirtualFields();
-				}.bind(this)).to.throw(Sequelize.SequelizeVirtualFieldsError, "Include of virtual field 'Task'.'virt' points to unknown model 'Foo'");
+				}.bind(this)).to.throw(Sequelize.VirtualFieldsError, "Include of virtual field 'Task'.'virt' points to unknown model 'Foo'");
 			});
 
 			it('nonexistent attribute on included model', function() {
@@ -188,7 +188,7 @@ describe(Support.getTestDialectTeaser('Tests'), function () {
 
 				expect(function() {
 					this.sequelize.initVirtualFields();
-				}.bind(this)).to.throw(Sequelize.SequelizeVirtualFieldsError, "Attribute of virtual field 'Task'.'virt' refers to a nonexistent field 'Person'.'foo'");
+				}.bind(this)).to.throw(Sequelize.VirtualFieldsError, "Attribute of virtual field 'Task'.'virt' refers to a nonexistent field 'Person'.'foo'");
 			});
 
 			it('un-associated model', function() {
@@ -205,7 +205,7 @@ describe(Support.getTestDialectTeaser('Tests'), function () {
 
 				expect(function() {
 					this.sequelize.initVirtualFields();
-				}.bind(this)).to.throw(Sequelize.SequelizeVirtualFieldsError, "Include of virtual field 'Task'.'virt' includes invalid association from 'Task' to 'Person'");
+				}.bind(this)).to.throw(Sequelize.VirtualFieldsError, "Include of virtual field 'Task'.'virt' includes invalid association from 'Task' to 'Person'");
 			});
 
 			it('un-associated model with as', function() {
@@ -225,7 +225,7 @@ describe(Support.getTestDialectTeaser('Tests'), function () {
 
 				expect(function() {
 					this.sequelize.initVirtualFields();
-				}.bind(this)).to.throw(Sequelize.SequelizeVirtualFieldsError, "Include of virtual field 'Task'.'virt' includes invalid association from 'Task' to 'Person'");
+				}.bind(this)).to.throw(Sequelize.VirtualFieldsError, "Include of virtual field 'Task'.'virt' includes invalid association from 'Task' to 'Person'");
 			});
 
 			it('circular dependency', function() {
@@ -253,7 +253,7 @@ describe(Support.getTestDialectTeaser('Tests'), function () {
 
 				expect(function() {
 					this.sequelize.initVirtualFields();
-				}.bind(this)).to.throw(Sequelize.SequelizeVirtualFieldsError, "Circular dependency in virtual fields at 'Task'.'virt'");
+				}.bind(this)).to.throw(Sequelize.VirtualFieldsError, "Circular dependency in virtual fields at 'Task'.'virt'");
 			});
 		});
 	});

@@ -162,3 +162,7 @@ Now working on all Sequelize dialects.
 
 * Use `instance.options` patch in `instanceGet`
 * Use Sequelize instance in `instanceGet`
+
+## Next
+
+* Rename `SequelizeVirtualFieldsError` to `VirtualFieldsError`
