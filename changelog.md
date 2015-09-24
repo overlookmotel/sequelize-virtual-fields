@@ -158,7 +158,7 @@ Now working on all Sequelize dialects.
 * Update `semver-select` dependency
 * Update dev dependencies
 
-## Next
+## 0.3.5
 
 * Use `instance.options` patch in `instanceGet`
 * Use Sequelize instance in `instanceGet`
