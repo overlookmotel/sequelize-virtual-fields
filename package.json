@@ -14,7 +14,7 @@
     "url": "https://github.com/overlookmotel/sequelize-virtual-fields/issues"
   },
   "dependencies": {
-    "lodash": "^3.10.1",
+    "lodash": "^4.16.1",
     "toposort-extended": "^1.0.1",
     "semver-select": "^1.1.0"
   },
