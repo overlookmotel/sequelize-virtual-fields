@@ -61,10 +61,5 @@
     "node": ">=0.10.0"
   },
   "readmeFilename": "README.md",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://github.com/overlookmotel/sequelize-virtual-fields/raw/master/License"
-    }
-  ]
+  "license": "MIT"
 }

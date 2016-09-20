@@ -176,3 +176,4 @@ Now working on all Sequelize dialects.
 * Travis CI runs on node v4 + v6
 * Travis CI runs on all branches except release tags (to support `greenkeeper.io`)
 * `.DS_Store` in `.gitignore`
+* Update license
