@@ -167,3 +167,7 @@ Now working on all Sequelize dialects.
 
 * Rename `SequelizeVirtualFieldsError` to `VirtualFieldsError`
 * Documentation for errors
+
+## Next
+
+* Travis CI runs on node v4 + v6
