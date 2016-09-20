@@ -172,6 +172,7 @@ Now working on all Sequelize dialects.
 
 * Update `lodash` dependency
 * Update dev dependencies
+* Replace `Makefile` with npm scripts
 * Travis CI runs on node v4 + v6
 * Travis CI runs on all branches except release tags (to support `greenkeeper.io`)
 * `.DS_Store` in `.gitignore`

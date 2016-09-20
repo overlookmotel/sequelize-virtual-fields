@@ -11,7 +11,7 @@ branches:
     - /^v\d+\./
 
 script:
-  - "make test"
+  - "npm run travis"
 
 before_script:
   - "mysql -e 'create database sequelize_test;'"
