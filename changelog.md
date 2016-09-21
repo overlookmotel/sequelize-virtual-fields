@@ -168,7 +168,7 @@ Now working on all Sequelize dialects.
 * Rename `SequelizeVirtualFieldsError` to `VirtualFieldsError`
 * Documentation for errors
 
-## Next
+## 0.3.8
 
 * Update `lodash` dependency
 * Update dev dependencies
