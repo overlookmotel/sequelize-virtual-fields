@@ -182,6 +182,7 @@ Now working on all Sequelize dialects.
 
 ## Next
 
+* Support only Node v4 upwards
 * Support Sequelize v4.x.x
 * Refactor `lib/errors` to be function not object
 * Refactor `lib/beforeFindHook` to be function returning function
