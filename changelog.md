@@ -180,7 +180,7 @@ Now working on all Sequelize dialects.
 * README update
 * Update license
 
-## Next
+## 1.0.0
 
 * Support only Node v4 upwards
 * Support Sequelize v4.x.x
