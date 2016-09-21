@@ -182,6 +182,7 @@ Now working on all Sequelize dialects.
 
 ## Next
 
+* Support Sequelize v4.x.x
 * Refactor `lib/errors` to be function not object
 * Refactor `lib/beforeFindHook` to be function returning function
 * Drop testing on Travis CI for `mariadb` + `mssql` dialects

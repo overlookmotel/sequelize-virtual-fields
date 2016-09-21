@@ -343,7 +343,7 @@ describe(Support.getTestDialectTeaser('Tests'), function () {
 			    '^2.0.0': function(model, options) {
 			        return model.find(options, {transaction: options.transaction, logging: options.logging});
 			    },
-			    '*': function(model, options) {
+			    '>=3.0.0 || >=4.0.0-0': function(model, options) {
 			        return model.find(options);
 			    }
 			});
