@@ -2,6 +2,12 @@
 
 # Sequelize virtual fields magic
 
+[![NPM version](https://img.shields.io/npm/v/sequelize-virtual-fields.svg)](https://www.npmjs.com/package/sequelize-virtual-fields)
+[![Build Status](https://img.shields.io/travis/overlookmotel/sequelize-virtual-fields/master.svg)](http://travis-ci.org/overlookmotel/sequelize-virtual-fields)
+[![Dependency Status](https://img.shields.io/david/overlookmotel/sequelize-virtual-fields.svg)](https://david-dm.org/overlookmotel/sequelize-virtual-fields)
+[![Dev dependency Status](https://img.shields.io/david/dev/overlookmotel/sequelize-virtual-fields.svg)](https://david-dm.org/overlookmotel/sequelize-virtual-fields)
+[![Coverage Status](https://img.shields.io/coveralls/overlookmotel/sequelize-virtual-fields/master.svg)](https://coveralls.io/r/overlookmotel/sequelize-virtual-fields)
+
 ## What's it for?
 
 This plugin for [Sequelize](http://sequelizejs.com/) adds some magic to VIRTUAL fields, so that they can be used the same as normal fields.
@@ -11,12 +17,6 @@ If a virtual field references attributes of an associated model, this can be def
 Why is this useful? You might, for example, want to build a Drupal-style framework where every model instance has a 'name' field which which may take its value from fields in associated models.
 
 ## Current status
-
-[![NPM version](https://img.shields.io/npm/v/sequelize-virtual-fields.svg)](https://www.npmjs.com/package/sequelize-virtual-fields)
-[![Build Status](https://img.shields.io/travis/overlookmotel/sequelize-virtual-fields/master.svg)](http://travis-ci.org/overlookmotel/sequelize-virtual-fields)
-[![Dependency Status](https://img.shields.io/david/overlookmotel/sequelize-virtual-fields.svg)](https://david-dm.org/overlookmotel/sequelize-virtual-fields)
-[![Dev dependency Status](https://img.shields.io/david/dev/overlookmotel/sequelize-virtual-fields.svg)](https://david-dm.org/overlookmotel/sequelize-virtual-fields)
-[![Coverage Status](https://img.shields.io/coveralls/overlookmotel/sequelize-virtual-fields/master.svg)](https://coveralls.io/r/overlookmotel/sequelize-virtual-fields)
 
 API is stable. All features and options are fairly well tested. Works with all dialects of SQL supported by Sequelize (MySQL, Postgres, SQLite) except for Microsoft SQL Server.
 
@@ -127,7 +127,7 @@ Requires a database called 'sequelize_test' and a db user 'sequelize_test' with 
 
 ## Changelog
 
-See changelog.md
+See [changelog.md](https://github.com/overlookmotel/sequelize-virtual-fields/blob/master/changelog.md)
 
 ## Known issues
 
