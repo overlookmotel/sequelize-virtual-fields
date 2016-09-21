@@ -182,4 +182,5 @@ Now working on all Sequelize dialects.
 
 ## Next
 
+* Refactor `lib/errors` to be function not object
 * Drop testing on Travis CI for `mariadb` + `mssql` dialects
