@@ -179,3 +179,7 @@ Now working on all Sequelize dialects.
 * Update `.npmignore`
 * README update
 * Update license
+
+## Next
+
+* Drop testing on Travis CI for `mariadb` + `mssql` dialects
