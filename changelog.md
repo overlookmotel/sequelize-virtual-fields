@@ -188,3 +188,7 @@ Now working on all Sequelize dialects.
 * Refactor `lib/init` to be function returning function
 * Refactor `lib/beforeFindHook` to be function returning function
 * Drop testing on Travis CI for `mariadb` + `mssql` dialects
+
+## Next
+
+* Code comments
