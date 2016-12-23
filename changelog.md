@@ -189,7 +189,7 @@ Now working on all Sequelize dialects.
 * Refactor `lib/beforeFindHook` to be function returning function
 * Drop testing on Travis CI for `mariadb` + `mssql` dialects
 
-## Next
+## 1.1.0
 
 * Remove Sequelize peer dependency to fix Travis fails
 * Code comments
