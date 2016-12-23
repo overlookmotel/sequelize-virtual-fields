@@ -18,9 +18,6 @@
     "toposort-extended": "^1.0.1",
     "semver-select": "^1.1.0"
   },
-  "peerDependencies": {
-    "sequelize": "2.0.0 - 3.x.x || ^4.0.0-2"
-  },
   "devDependencies": {
     "mocha": "^3.0.2",
     "chai": "^3.5.0",

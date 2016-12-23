@@ -191,4 +191,5 @@ Now working on all Sequelize dialects.
 
 ## Next
 
+* Remove Sequelize peer dependency to fix Travis fails
 * Code comments
