@@ -1,5 +1,7 @@
 # sequelize-virtual-fields.js
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/overlookmotel/sequelize-virtual-fields.svg)](https://greenkeeper.io/)
+
 # Sequelize virtual fields magic
 
 [![NPM version](https://img.shields.io/npm/v/sequelize-virtual-fields.svg)](https://www.npmjs.com/package/sequelize-virtual-fields)
