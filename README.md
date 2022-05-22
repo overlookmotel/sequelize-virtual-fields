@@ -3,7 +3,6 @@
 # Sequelize virtual fields magic
 
 [![NPM version](https://img.shields.io/npm/v/sequelize-virtual-fields.svg)](https://www.npmjs.com/package/sequelize-virtual-fields)
-[![Build Status](https://img.shields.io/travis/overlookmotel/sequelize-virtual-fields/master.svg)](http://travis-ci.org/overlookmotel/sequelize-virtual-fields)
 [![Dependency Status](https://img.shields.io/david/overlookmotel/sequelize-virtual-fields.svg)](https://david-dm.org/overlookmotel/sequelize-virtual-fields)
 [![Dev dependency Status](https://img.shields.io/david/dev/overlookmotel/sequelize-virtual-fields.svg)](https://david-dm.org/overlookmotel/sequelize-virtual-fields)
 [![Coverage Status](https://img.shields.io/coveralls/overlookmotel/sequelize-virtual-fields/master.svg)](https://coveralls.io/r/overlookmotel/sequelize-virtual-fields)
