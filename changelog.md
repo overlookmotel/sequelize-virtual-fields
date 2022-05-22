@@ -193,3 +193,11 @@ Now working on all Sequelize dialects.
 
 * Remove Sequelize peer dependency to fix Travis fails
 * Code comments
+
+## 1.1.1
+
+* Don't mutate virtual field's includes [fix]
+* Dev: Remove Travis CI
+* Dev: Update `editorconfig`
+* Docs: Update license year
+* Docs: Remove license indent
